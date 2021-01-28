@@ -1,12 +1,18 @@
 export const MailConfig = {
-	host: process.env.MAIL_HOST || 'smtp.mailtrap.io',
+	host: process.env.MAIL_HOST,
 	port: 2525,
-	user: process.env.MAIL_USER || 'da075a825e386a',
-	pass: process.env.MAIL_PASS || '0771dbeadeb927',
+	user: process.env.MAIL_USER,
+	pass: process.env.MAIL_PASS,
+};
+
+export const RedisConfig = {
+	host: process.env.REDIS_HOST,
+	port: 6379,
 };
 
 const Values = {
 	MailConfig,
+	RedisConfig,
 };
 
 export default Values;

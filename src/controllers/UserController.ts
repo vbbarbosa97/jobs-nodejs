@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
-import Mail from '../lib/Mail';
-
+import Queue from '../lib/Queue';
 class UserController {
 	async store(req: Request, res: Response) {
 		const { name, email, password } = req.body;
@@ -11,12 +10,7 @@ class UserController {
 			password,
 		};
 
-		await Mail.sendMail({
-			from: 'Teste de email <jobs@jobsNodejs.com.br>',
-			to: `${name} <${email}>`,
-			subject: 'Cadastro de usuário',
-			html: `Olá, ${name}, bem-vindo ao sistema de filas da JobsNodejs`,
-		});
+		await Queue.add('RegistrationMail', { name, email });
 
 		return res.json(user);
 	}
