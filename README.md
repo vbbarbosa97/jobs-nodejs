@@ -12,7 +12,7 @@ O projeto conta com a `Api`, segue abaixo a demostração das funcionalidades ad
 
 <div>
   <p align="center">
-    <img src="./.github/jobs.gif" alt="Pagina principal" height="325">
+    <img src="./src/.github/jobs.gif" alt="Pagina principal" height="325">
   </p>
 </div>
 
