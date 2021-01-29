@@ -1,5 +1,4 @@
 import Mail from '../lib/Mail';
-import { QueueOptions } from 'bull';
 
 type RegistrationMailProps = {
 	name: string;
