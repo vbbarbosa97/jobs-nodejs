@@ -1,4 +1,5 @@
 import Mail from '../lib/Mail';
+import { QueueOptions } from 'bull';
 
 type RegistrationMailProps = {
 	name: string;
@@ -20,5 +21,8 @@ export default {
 			subject: 'Cadastro de usuário',
 			html: `Olá, ${name}, bem-vindo ao sistema de filas da JobsNodejs`,
 		});
+	},
+	options: {
+		delay: 5000,
 	},
 };
